@@ -13,9 +13,9 @@ tagline: Site Tagline
 author :
   name : Toby Chung
   email : toby4120@gmail.com
-  github : username
-  twitter : username
-  feedburner : feedname
+  github : toby4120
+  facebook : gigi.chung.104
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -82,7 +82,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : 
     livefyre :
       site_id : 123
     intensedebate :
