@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 每天都是一場場的全力短跑衝刺
-tagline: Supporting tagline
+title: 近期文章
+tagline: 
 ---
 {% include JB/setup %}
 
