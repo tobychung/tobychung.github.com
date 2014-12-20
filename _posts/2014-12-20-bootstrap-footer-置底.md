@@ -10,14 +10,16 @@ tags : [bootstrap]
 
 在twitter bootstrap 裡footer預設是黏著body
 
-跟著又高又低的有點煩
+跟著又高又低的很有事
 
 所以突發奇想來stick my fucking footer 啦！！！
 
 <br/><br/><br/>
 
 
-#HTML
+#解決
+###HTML
+
 footer部分
 
 ~~~html
@@ -31,12 +33,9 @@ footer部分
 
 >加container是為了讓footer裏的內容可以置中
 
+<br/>
 
-<br/><br/><br/>
-
-
-
-#CSS
+###CSS
 
 ~~~css
 html {

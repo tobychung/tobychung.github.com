@@ -17,6 +17,7 @@ code {
 }
 blockquote {
   border-left: 3px solid #abc;
+  color: #808080;
 }
 html {
   position: relative;
