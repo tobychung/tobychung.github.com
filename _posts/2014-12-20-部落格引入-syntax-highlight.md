@@ -64,11 +64,11 @@ print("hello, world")
 
 <br/><br/>
 #可是 again
-突然發現table感覺像是在補天花板
+突然發現table壞掉了
 
-這邊補好那邊又漏水。。。
+感覺就像抓漏，這邊補好那邊又漏水。。。
 
-修好它吧...
+修好它吧！！！
 
 * 到_config.yml裡加上
 
@@ -81,7 +81,13 @@ redcarpet:
 <br/><br/>
 ##耶～大功告成！！！
 
-
+~~~
+<div class="container">
+	<div class="row">
+			<p>阿不就好棒棒！</a>
+	</div>
+</div>
+~~~
 
 
 
