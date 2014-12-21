@@ -72,32 +72,50 @@ blockquote{
 
 
 //----- 讓footer置底 -----//
+
+html, body
+{
+    height: 100%;
+}
+
+
 html {
   
   position: relative;
   min-height: 100%;
+
   
 }
 body {
   // background-image: url("http://www.wallpaperbod.com/wp-content/uploads/2013/04/Light-Gaussian-Blur-.jpg");
-  background-image: url("{{ site.production_url }}/assets/themes/twitter/img/blurBG.jpg");
-  margin-bottom: 60px;
-  
+  background-image: url(../img/blurBG2.jpg);
+  margin-bottom: 0px;
+  min-height: 100%;
 }
 footer {
   
   color:#fff;
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   height: 60px;
   width: 100%;
   background-color: rgb(65,65,65);
+  border:0px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   text-align: center;
   cursor: default;
+
+  
+  p{line-height: 25px;}
 
   a{ cursor: default;}
 
 }
+
+.blur-me {
+  filter: blur(20px);
+  }
+
 
 //----- code色碼 -----//
 
