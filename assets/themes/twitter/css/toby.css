@@ -1,5 +1,5 @@
 a {
-  color: #404040;
+  color: #4083c4;
 }
 a:hover {
   text-decoration: none;
@@ -33,4 +33,16 @@ footer {
   width: 100%;
   background-color: #f5f5f5;
   text-align: center;
+}
+.highlight .nc {
+  color: #a6e22d;
+}
+.highlight .n {
+  color: #66d9ef;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
 }
