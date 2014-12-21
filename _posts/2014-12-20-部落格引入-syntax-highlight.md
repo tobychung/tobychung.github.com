@@ -36,16 +36,17 @@ highlighter: pygments
 #試用
 應該效果出來囉～～撒花～～
 
-~~~
-～～～html
+~~~html
+～～～
 <div class="hello">
-print("hello, world")
+	<p>hello, world!</p>
 </div>
 ～～～
 ~~~
 <br/><br/>
+
 #可是
-我貼程式碼的時候才發現有點醜醜der，改一下顏色吧！
+貼程式碼的時候一定會發現怎麼哪裡怪怪der(?!)，code顏色啦！
 
 我改的是sublime text的預設顏色
 
@@ -81,7 +82,7 @@ redcarpet:
 <br/><br/>
 ##耶～大功告成！！！
 
-~~~
+~~~html
 <div class="container">
 	<div class="row">
 			<p>阿不就好棒棒！</a>
