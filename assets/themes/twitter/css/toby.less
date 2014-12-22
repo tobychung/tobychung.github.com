@@ -65,40 +65,59 @@ blockquote{
 
 
 
+//----- 內文展開 -----//
 
 
+// .contentBG{
+	
+// 	position: fixed;
+// 	width: 100%;
+// 	min-height:100%;
+// 	background-image: url(../img/blurBG2.jpg);
+// 	background-position:center;
+//     background-repeat:no-repeat;
+//     background-size: cover;
+// 	z-index: -2;
+// }
 
-
+// .content-wrap{
+	
+// 	position: relative;
+// 	width: 100%;
+// 	min-height:100%;
+	
+// 	background-image: url(../img/blurBG2.jpg);
+// 	z-index: 0;
+// }
 
 
 //----- 讓footer置底 -----//
 
-html, body
-{
-    height: 100%;
-}
 
 
-html {
-  
-  position: relative;
-  min-height: 100%;
-
-  
-}
 body {
-  // background-image: url("http://www.wallpaperbod.com/wp-content/uploads/2013/04/Light-Gaussian-Blur-.jpg");
-  background-image: url(../img/blurBG2.jpg);
-  margin-bottom: 0px;
-  min-height: 100%;
+    height: 100%;  
+    margin:0px;
+    background: url(../img/blurBG2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
-footer {
+
+
+.content-wrap{
+	
+	min-height: 1000px;
+
+}
+
+
+
+.footer {
   
-  color:#fff;
-  position: absolute;
-  bottom: -40px;
-  height: 60px;
+
+  height: 80px;
   width: 100%;
+  color:#fff;
   background-color: rgb(65,65,65);
   border:0px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
@@ -106,7 +125,9 @@ footer {
   cursor: default;
 
   
-  p{line-height: 25px;}
+  p{
+	margin-top: 20px;
+  	line-height: 25px;}
 
   a{ cursor: default;}
 

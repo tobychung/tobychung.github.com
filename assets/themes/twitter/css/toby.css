@@ -19,35 +19,31 @@ blockquote {
   border-left: 3px solid #abc;
   color: #808080;
 }
-html,
 body {
   height: 100%;
+  margin: 0px;
+  background: url(../img/blurBG2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
-html {
-  position: relative;
-  min-height: 100%;
+.content-wrap {
+  min-height: 1000px;
 }
-body {
-  background-image: url(../img/blurBG2.jpg);
-  margin-bottom: 0px;
-  min-height: 100%;
-}
-footer {
-  color: #fff;
-  position: absolute;
-  bottom: -40px;
-  height: 60px;
+.footer {
+  height: 80px;
   width: 100%;
+  color: #fff;
   background-color: #414141;
   border: 0px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   text-align: center;
   cursor: default;
 }
-footer p {
+.footer p {
+  margin-top: 20px;
   line-height: 25px;
 }
-footer a {
+.footer a {
   cursor: default;
 }
 .blur-me {
