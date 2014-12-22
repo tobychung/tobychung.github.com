@@ -34,10 +34,16 @@ Thats why！！
 
 <br/>
 
-<ul class="index_ul">
-	<li><a href="mailto:toby4120@gmail.com">Gmail</a></li>
-	<li><a href="https://www.facebook.com/gigi.chung.104">Facebook</a></li>
-</ul>
+
+
+<p class="contact"><a href="mailto:toby4120@gmail.com"><i class="fa fa-inbox fa-fw"></i> Gmail</a> |
+<a href="https://www.facebook.com/gigi.chung.104"><i class="fa fa-facebook fa-fw"></i>Facebook</a> 
+</p>
+<!-- 
+<a href="http://www.plurk.com/chchwy"><i class="fa fa-pinterest fa-fw"></i>Plurk</a> | 
+<a href="http://www.anobii.com/chchwy"><i class="fa fa-book fa-fw"></i>Anobii</a> | 
+<a href="http://book.douban.com/people/65684654/"><i class="fa fa-book fa-fw"></i>豆瓣讀書</a> |
+<a href="http://chchwy.logdown.com"><i class="fa fa-pencil fa-fw"></i>Logdown</a></p> -->
 
 <br/>
 
