@@ -18,9 +18,11 @@ tags : [bootstrap]
 
 
 #解決
-###HTML
+
 
 footer部分
+
+<div class="code_type">HTML</div>
 
 ~~~html
 <footer>      
@@ -35,7 +37,8 @@ footer部分
 
 <br/>
 
-###CSS
+
+<div class="code_type">CSS</div>
 
 ~~~css
 html {

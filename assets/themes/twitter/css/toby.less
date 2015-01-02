@@ -1,5 +1,23 @@
 // ！！！客製化！！！ //
 
+.visible{
+
+	opacity:1;
+     
+}
+
+.unvisible{
+
+    visibility: hidden;
+}
+
+.hide {
+	 opacity:0; 	
+}
+.remove {
+  	display: none;
+}
+
 
 .header-wrap{
 	
@@ -27,7 +45,56 @@
 	vertical-align: middle;
 	
 
+	-webkit-animation-delay: 2s;
+            animation-delay: 2s;
+
 }
+
+
+
+// pre[rel]:before{
+
+// 	content: attr(rel);
+// 	color:#fff;
+// 	position: relative;
+// 	width: 100%;
+// 	background: #e18728;
+// 	font-family: 'Source Sans Pro',sans-serif;
+// 	font-weight:bold;
+// 	padding:5px 0;
+// 	text-indent: 15px;
+
+// }
+
+// .highlight[rel]:before{
+// 	position: relative;
+// 	height: 35px;
+// 	background: #e18728;
+// 	color:#fff;
+// 	content: attr(rel);
+// 	font-size: 20px;
+// 	letter-spacing: 1px;
+// 	font-weight:bold;
+// 	text-indent: 15px;
+// 	line-height: 37px;
+
+// }
+
+.code_type{
+	position: relative;
+	height: 35px;
+	background: #e18728;
+	color:#fff;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-weight:bold;
+	text-indent: 15px;
+	line-height: 37px;
+
+}
+
+
+
 
 .header_text{
 
@@ -36,12 +103,28 @@
 	font-size: 30px;
 	display: inline-block;
 }
+.content{
+	p{
+		font-size: 18px;
+		line-height: 29px;
 
-p{
-	font-size: 18px;
-	line-height: 29px;
+	}
 
+	li{
+		font-size: 15px;
+		line-height: 25px;
+
+	}
 }
+
+
+blockquote {
+	p{
+		font-size: 15px;
+		line-height: 15px;
+	}
+}
+
 
 a{
 	// color: rgb(64, 131, 196);
@@ -102,6 +185,11 @@ blockquote{
 }
 
 
+  
+
+        
+
+  
 
 
 
@@ -115,10 +203,12 @@ blockquote{
 body {
     height: 100%;  
     margin:0px;
+    background: url(../img/contBG2.jpg);
     // background: url(../img/blurBG2.jpg);
+
     // background-size: cover;
     // background-attachment: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
+    // background-color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -136,9 +226,10 @@ body {
   height: 80px;
   width: 100%;
   color:#fff;
-  //background-color: rgb(65,65,65);
+  // background-color: rgb(65,65,65);
+  background-color: rgba(0, 0, 0, 0.7);
   border:0px;
-  // box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
   text-align: center;
   cursor: default;
 

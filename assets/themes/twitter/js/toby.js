@@ -1,24 +1,15 @@
 $(function(){
 
-	// var $window = $(window);
-	// var contact = $(".contact");
-	// var contactX = contact.offset().left;
-	// var plus = $('.plus_all');
-	// var plusX = contactX + 230 + 'px';
-		
-	// plus.css({left:plusX});
 
+		$('.header_title').addClass('fadeInDown animated');
 	
-	// $window.resize(function(){	
-		
-	// 	var contact = $(".contact");
-	// 	var contactX = contact.offset().left;
-	// 	var plus = $('.plus_all');
-	// 	var plusX = contactX + 230 + 'px';
-			
-	// 	plus.css({left:plusX});
 
-	// });
+//.find('.header_text').andSelf()
+
+
+	var highlight_width = $('.highlight').width();
+
+	$('.content').find('.code_type').css({width:highlight_width});
 	
 
 

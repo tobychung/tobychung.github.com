@@ -36,6 +36,8 @@ highlighter: pygments
 #試用
 應該效果出來囉～～撒花～～
 
+<div class="code_type">HTML</div>
+
 ~~~html
 ～～～
 <div class="hello">
@@ -55,7 +57,9 @@ highlighter: pygments
 
 * 到syntax.css裡改css
 
-~~~
+<div class="code_type">CSS</div>
+
+~~~css
 .highlight .s { color: #E6D255; }
 .highlight .m { color: #BA94F2; }
 .highlight .nt { color: #E93979; }
