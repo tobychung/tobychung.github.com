@@ -53,8 +53,8 @@ body {
   text-align: center;
   display: block;
   vertical-align: middle;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
 }
 .header_text {
   position: relative;
