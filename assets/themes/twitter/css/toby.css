@@ -14,7 +14,6 @@ body {
   height: 100%;
   margin: 0px;
   padding-top: 0.1px;
-  background-color: #666666;
 }
 .content-wrap {
   min-height: 1650px;
@@ -38,7 +37,7 @@ body {
   position: fixed;
   width: 100%;
   height: 400px;
-  background-image: url(../img/headerBG2.jpg);
+  background-image: url(../img/lionBG.jpg);
   background-position: 20% 54%;
   overflow: hidden;
   z-index: 0;
@@ -199,6 +198,7 @@ blockquote {
   color: #e6db74;
 }
 .footer {
+  position: relative;
   height: 80px;
   width: 100%;
   color: #fff;
@@ -230,12 +230,6 @@ blockquote {
 @media (min-width: 400px) and (max-width: 758px) {
    .footer_box {
     width: 60%;
-  }
-}
-@media (min-width: 400px) and (max-width: 600px) {
-   pre {
-    width: 370px;
-    word-break: break-all;
   }
 }
 @media only screen and (max-width: 560px) {

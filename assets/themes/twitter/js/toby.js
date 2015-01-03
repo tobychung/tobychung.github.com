@@ -10,16 +10,71 @@ $(function(){
 		
 		var pos = $window.scrollTop();
 
-		if(pos>=400){
+		//文章裡//
+		if('.content.span4'){
 
-			$('.header-wrap').css({display:'none'});
+			if(pos>=400){
+
+				$('.header-wrap').css({backgroundImage:'url(../../../../../../assets/themes/twitter/img/contBG3.jpg)',height:'1200px'})
+								 .find('.header_title').hide();
+				$('.contentBG').css({backgroundImage: 'none'});
+
+				var content_height = $('.container').height();
+				var footer_offset = content_height - 1649 + 'px';
+				
+				if(content_height>=1200){
+
+					$('.footer').css({marginTop:footer_offset});
+
+				}
+				
+				
+				
+			}
+
+			if(pos<=400){
+
+				$('.header-wrap').css({backgroundImage:'',height:''})
+								 .find('.header_title').css({display:'block'});
+				
+				$('.contentBG').css({backgroundImage: ''});
+			}
+
+
+
 		}
 
+		//文章外//
 		else{
 
-			$('.header-wrap').css({display:''});
-		}
+			if(pos>=400){
 
+				$('.header-wrap').css({backgroundImage:'url(../assets/themes/twitter/img/contBG3.jpg)',height:'1200px'})
+								 .find('.header_title').hide();
+				$('.contentBG').css({backgroundImage: 'none'});
+
+
+				var content_height = $('.container').height();
+				var footer_offset = content_height - 1649 + 'px';
+				
+				if(content_height>=1200){
+
+					$('.footer').css({marginTop:footer_offset});
+
+				}
+
+
+			}
+
+			if(pos<=400){
+
+				$('.header-wrap').css({backgroundImage:'',height:''})
+								 .find('.header_title').css({display:'block'});
+				
+				$('.contentBG').css({backgroundImage: ''});
+			}
+		
+		}
 
 
 		console.log('現在滾了',pos,'px');
