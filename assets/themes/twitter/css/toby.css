@@ -28,7 +28,7 @@ body {
   color: #fff;
 }
 .nav a:hover {
-  color: #FC9700;
+  color: #FFD600;
 }
 .topbar {
   background-color: #666666;
@@ -63,6 +63,9 @@ body {
   display: inline-block;
 }
 .header_text a {
+  color: #FFD600;
+}
+.header_text a:hover {
   color: #FFD600;
 }
 .content-wrap {
