@@ -36,7 +36,7 @@
 
   <body>
     <!-- 導航列 -->
-    <div class="topbar">
+    <!-- <div class="topbar">
       <div class="fill">
         <div class="container">
          
@@ -47,27 +47,34 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <div class="header-wrap">
          <div class="header_title ">
             <div class="header_text">
-              <a class="brand " href="{{ HOME_PATH }}">{{ site.title }}</a>
+                <a class="brand " href="{{ HOME_PATH }}">{{ site.title }}</a>
             </div>
+            <ul class="nav">
+                {% assign pages_list = site.pages %}
+                {% assign group = 'navigation' %}
+                {% include JB/pages_list %}
+            </ul>
+
+
          </div>
     </div>
 
     <!-- 內容 -->
     <!-- <div class="contentBG"></div> -->
-    <div class="content-wrap">   
+    <div class="content-wrap">
+      <div cLASS="contentBG">   
         <div class="container">
-
           <div class="content">
             {{ content }}
           </div>
         </div> <!-- /container -->
-    
+      </div>
     </div> 
     
 
