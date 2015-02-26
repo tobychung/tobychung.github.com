@@ -41,7 +41,7 @@ tagline:
 
 
 <p class="contact"><a href="mailto:toby4120@gmail.com"><i class="fa fa-inbox fa-fw"></i> Gmail</a> |
-<a href="https://www.facebook.com/gigi.chung.104"><i class="fa fa-facebook fa-fw"></i>Facebook</a> 
+<a href="https://www.facebook.com/toby4120"><i class="fa fa-facebook fa-fw"></i>Facebook</a> 
 </p>
 <!-- 
 <a href="http://www.plurk.com/chchwy"><i class="fa fa-pinterest fa-fw"></i>Plurk</a> | 
