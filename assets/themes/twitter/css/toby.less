@@ -2,6 +2,13 @@
 
 //------ 基本 ------//
 
+	
+	.center{
+
+		margin-left: auto;
+		margin-right: auto;
+
+	}
 
 	.visible{
 
@@ -24,26 +31,32 @@
 //------ 骨幹 ------//
 
 	//-為了讓footer置底-//
-	body {
-		    height: 100%;  
-		    margin:0px;
-			padding-top: 0.1px;
-		    // background-color: #666666;
-		    // background-image: url(../img/contBG3.jpg); 
-		    // background: url(../img/contBG2.jpg);
-		    // background: url(../img/blurBG2.jpg);
 
-		    // background-size: cover;
-		    // background-attachment: fixed;
-		    // background-color: rgba(0, 0, 0, 0.8);
-		}
+	html{
+
+		height: 100%;
+	}
+
+	body {
+    
+    height: 100%;  
+    margin:0px;
+	  padding-top: 0.1px;
+	  overflow: auto;
+	  background-image: url(../img/contBG3.jpg);
+    // background-color: #666666;
+    // background-image: url(../img/contBG3.jpg); 
+    // background: url(../img/contBG2.jpg);
+    // background: url(../img/blurBG2.jpg);
+
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-color: rgba(0, 0, 0, 0.8);
+	}
 
 		
-		.content-wrap{
-			
-			min-height: 1650px;
-
-		}
+		
+		
 	//---------------//
 
 //------ 導航列 ------//
@@ -52,25 +65,19 @@
 		background-color: #666666;
 	}
 	
-	.nav{
-
-		margin:24px 0px 0px 23px;
-		a{
-			color: #fff;
-			&:hover{ color:#FFD600; }
-		}
-	}
-
 	.topbar{ background-color:#666666; }
 
 //------ header ------//
 
 	.header-wrap{
 		
-		position: fixed;
-		width: 100%;
-		height: 400px;
-		background-image: url(../img/lionBG.jpg);
+		.center;
+		position: relative;
+		margin-top: 30px;
+		width: 1070px;
+		height: 180px;
+		// background-image: url(../img/lionBG.jpg);
+		background-color: #fff;
 		background-position: 20% 54%;
 		overflow: hidden;
 		z-index: 0;
@@ -78,37 +85,56 @@
 	}
 
 	.header_title{
-
+		
 		position: relative;
-		height: 60px;
-		width:200px;
-		margin-top: 165px;
-		margin-left: auto;
-		margin-right: auto;
-		border: 5px solid #FFD600;
-		text-align: center;
-		display: block;
-		vertical-align: middle;
+    height: 100px;
+    width: 300px;
+    padding-left: 15px;
+    font-size: 35px;
+    text-align: left;
+    line-height: 100px;
+    display: block;
+    vertical-align: middle;
 		
 
 		-webkit-animation-delay: 200ms;
 	            animation-delay: 200ms;
 
+	  a{
+
+	  	color:#444;
+	  }
+
 	}
 
-	.header_text{
+	.header_nav{
 
-		position: relative;
-		margin-top: 20px;
-		font-size: 30px;
-		
-		display: inline-block;
-		a{ 
-			color:#FFD600; 
-			&:hover{ color:#FFD600;  }
+		width: 100%;
+		border-top: 2px solid #ECECEC;
+    border-bottom: 2px solid #ECECEC;
+    
+    li{
+
+    	&:first-child{
+
+    		margin-left: 10px;
+    	}
+
+    }
+
+		a{
+			
+			color: #444;
+			&:hover{ color:#444; }
 
 		}
 	}
+
+
+//------ 內文框架 ------//
+
+
+
 
 //------ 內文 ------//
 
@@ -125,18 +151,25 @@
 		
 		position: relative;
 		width: 100%;
-		height: 400px;
-		background-image: url(../img/contBG3.jpg); 
+		// height: 400px;
+		// background-image: url(../img/contBG3.jpg); 
 		// background-color: #fff;
-		margin-top: 400px;
+		// margin-top: 400px;
 		z-index: 2;
 
+		.container{
+
+			width: 1030.5px;
+		}
 
 	}
 
 	// 整體的字 //
 	.content{
 		
+		border-radius: 0px;
+
+
 		p{
 			font-size: 18px;
 			line-height: 29px;
@@ -342,25 +375,31 @@
 
 	.footer {
 	  
+	  .center;
 	  position: relative;
 	  height: 80px;
-	  width: 100%;
+	  width: 1070px;
 	  color:#fff;
 	  // background-color: rgb(65,65,65);
 	  background-color: rgba(0, 0, 0, 0.7);
+	  margin-bottom: 30px;
 	  border:0px;
 	  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
-	  text-align: center;
 	  cursor: default;
 
+	  .footer_box{
+
+	  	text-align: center;
+	  }
 	  
 	  p{
-		margin-top: 20px;
-	  	line-height: 25px;}
+			margin-top: 28px;
+	  	line-height: 25px;
+	  }
 
 	  a{ 
 			color: #4083C4;
-	  		cursor: default;
+	  	cursor: default;
 		 	&:hover{color: rgb(64, 131, 196);}	
 
 	  }
@@ -368,8 +407,10 @@
 	}
 
 	.blur-me {
+	  
 	  filter: blur(20px);
-	  }
+	
+	}
 
 
 

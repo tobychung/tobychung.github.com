@@ -6,23 +6,24 @@ tags : [javascript]
 ---
 {% include JB/setup %}
 
-##<font color="green">宣告陣列</font>
+##<font color="green">map</font>
+
+對目標array做整理用的
 
 
 <div class="code_type">JS</div>
 
 ~~~js
 
-var week1 = 1;
-var week2 = 3;
-var week3 = 4;
-var week4 = 8;
-var week5 = 2;
+var avg_arr = d_arr;
 
+avg_arr = avg_arr.map(function(num){
 
-var array = [];
+				return num/4;
 
-array.push(week1,week2,week3,week4,week5);
+			});
+
+console.log('平均',avg_arr)
 
 
 ~~~

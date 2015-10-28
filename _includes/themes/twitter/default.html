@@ -51,19 +51,20 @@
 
 
     <div class="header-wrap">
-         <div class="header_title ">
-            <div class="header_text">
-                <a class="brand " href="{{ HOME_PATH }}">{{ site.title }}</a>
-            </div>
-            <ul class="nav">
-                {% assign pages_list = site.pages %}
-                {% assign group = 'navigation' %}
-                {% include JB/pages_list %}
-            </ul>
+        <!-- 站名 -->
+        <div class="header_title ">
+          <a class="brand " href="{{ HOME_PATH }}">{{ site.title }}</a>
+        </div>
 
+        <!-- 導航列 -->
+        <div class="header_nav nav">
+              {% assign pages_list = site.pages %}
+              {% assign group = 'navigation' %}
+              {% include JB/pages_list %}
+        </div>
 
-         </div>
     </div>
+
 
     <!-- 內容 -->
     <!-- <div class="contentBG"></div> -->
@@ -82,12 +83,7 @@
     <div class="footer">
       
         <div class="container blur-me footer_box">
-          <p>&copy; 2014 {{ site.author.name }} .
-             Powered by <a>Jekyll Bootstrap</a>.
-             </br>
-             Theme by <a>Twitter Bootstrap</a>.
-             Customized by Toby Chung.
-          </p>
+          <p>Copyright &copy; 2014 {{ site.author.name }} </p>
         </div>
 
     </div>
