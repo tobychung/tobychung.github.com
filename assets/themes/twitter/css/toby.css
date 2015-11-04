@@ -1,3 +1,7 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
 .visible {
   opacity: 1;
 }
@@ -10,63 +14,63 @@
 .remove {
   display: none;
 }
+html {
+  height: 100%;
+}
 body {
   height: 100%;
   margin: 0px;
   padding-top: 0.1px;
-}
-.content-wrap {
-  min-height: 1650px;
+  overflow: auto;
+  background-image: url(../img/contBG3.jpg);
 }
 .fill {
   background-color: #666666;
-}
-.nav {
-  margin: 24px 0px 0px 23px;
-}
-.nav a {
-  color: #fff;
-}
-.nav a:hover {
-  color: #FFD600;
 }
 .topbar {
   background-color: #666666;
 }
 .header-wrap {
-  position: fixed;
-  width: 100%;
-  height: 400px;
-  background-image: url(../img/lionBG.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 30px;
+  width: 1070px;
+  height: 180px;
+  background-color: #fff;
   background-position: 20% 54%;
   overflow: hidden;
   z-index: 0;
 }
 .header_title {
   position: relative;
-  height: 60px;
-  width: 200px;
-  margin-top: 165px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 5px solid #FFD600;
-  text-align: center;
+  height: 100px;
+  width: 300px;
+  padding-left: 15px;
+  font-size: 35px;
+  text-align: left;
+  line-height: 100px;
   display: block;
   vertical-align: middle;
   -webkit-animation-delay: 200ms;
   animation-delay: 200ms;
 }
-.header_text {
-  position: relative;
-  margin-top: 20px;
-  font-size: 30px;
-  display: inline-block;
+.header_title a {
+  color: #444;
 }
-.header_text a {
-  color: #FFD600;
+.header_nav {
+  width: 100%;
+  border-top: 2px solid #ECECEC;
+  border-bottom: 2px solid #ECECEC;
 }
-.header_text a:hover {
-  color: #FFD600;
+.header_nav li:first-child {
+  margin-left: 10px;
+}
+.header_nav a {
+  color: #444;
+}
+.header_nav a:hover {
+  color: #444;
 }
 .content-wrap {
   background-image: url(../img/contBG3.jpg);
@@ -74,10 +78,13 @@ body {
 .contentBG {
   position: relative;
   width: 100%;
-  height: 400px;
-  background-image: url(../img/contBG3.jpg);
-  margin-top: 400px;
   z-index: 2;
+}
+.contentBG .container {
+  width: 1030.5px;
+}
+.content {
+  border-radius: 0px;
 }
 .content p {
   font-size: 18px;
@@ -99,13 +106,19 @@ a:hover {
   color: #4083C4;
 }
 pre {
-  border-radius: 4px;
-  background-color: #333;
+  margin-top: 0px;
+  margin-right: auto;
+  font: 12px/20px 'courier new';
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ddd !important;
+  border-left-width: 4px !important;
+  background: #fbfbfb url(../img/codecolorer_bg.gif) top;
+  padding: 10px 15px;
 }
 code {
-  background-color: #333;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  color: #fff;
+  background-color: transparent;
+  font: 12px/20px 'courier new';
   font-size: 14px;
 }
 blockquote {
@@ -180,39 +193,47 @@ blockquote {
 .code_type {
   position: relative;
   height: 35px;
-  background: #e18728;
-  color: #fff;
+  color: #A0A0A0;
   font-size: 20px;
   letter-spacing: 1px;
-  font-weight: bold;
-  text-indent: 15px;
   line-height: 37px;
 }
+.highlight .nt {
+  color: #E65555;
+}
+.highlight .na {
+  color: #6EB86E;
+}
 .highlight .nc {
-  color: #a6e22d;
+  color: #645564;
 }
 .highlight .n {
-  color: #66d9ef;
+  color: #6F0000;
 }
 .highlight .s {
-  color: #e6db74;
+  color: #ABA750;
 }
 .highlight .s1 {
-  color: #e6db74;
+  color: #4DA25B;
 }
 .footer {
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   height: 80px;
-  width: 100%;
+  width: 1070px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
   border: 0px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
-  text-align: center;
   cursor: default;
 }
+.footer .footer_box {
+  text-align: center;
+}
 .footer p {
-  margin-top: 20px;
+  margin-top: 28px;
   line-height: 25px;
 }
 .footer a {
@@ -225,19 +246,24 @@ blockquote {
 .blur-me {
   filter: blur(20px);
 }
+@media (min-width: 768px) {
+  
+}
 @media (min-width: 758px) and (max-width: 780px) {
-   .footer_box {
+  .footer_box {
     width: 60%;
   }
 }
 @media (min-width: 400px) and (max-width: 758px) {
-   .footer_box {
+  .footer_box {
     width: 60%;
   }
 }
 @media only screen and (max-width: 560px) {
-   .footer_box {
+  .footer_box {
     width: 400px;
     margin-left: 0px;
   }
 }
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
