@@ -10,12 +10,17 @@
 }
 .hide {
   opacity: 0;
+  /*下面多家的for github*/
+  display: block;
+
+
 }
 .remove {
   display: none;
 }
 html {
   height: 100%;
+
 }
 body {
   height: 100%;
