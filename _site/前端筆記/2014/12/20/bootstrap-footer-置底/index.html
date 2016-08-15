@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Footer 置底</title>
+    
+    <meta name="author" content="Ajay Chung">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/animate.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/syntax.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/toby.css" rel="stylesheet">
+
+    <!-- Le javascript -->
+    <script src="/assets/themes/twitter/js/jquery.min.js"></script>
+    <script src="/assets/themes/twitter/js/toby.js"></script>
+    
+
+    <!-- Le fav and touch icons -->
+    <link href="/assets/themes/twitter/img/yy.ico" rel="shortcut icon" >
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <!-- 導航列 -->
+    <!-- <div class="topbar">
+      <div class="fill">
+        <div class="container">
+         
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">檔案櫃</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">目錄</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">標籤</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="header-wrap">
+        <!-- 站名 -->
+        <div class="header_title ">
+          <a class="brand " href="/">Coding Hash</a>
+        </div>
+
+        <!-- 導航列 -->
+        <div class="header_nav nav">
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">檔案櫃</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">目錄</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">標籤</a></li>
+      	
+      
+    
+  
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- 內容 -->
+    <!-- <div class="contentBG"></div> -->
+    <div class="content-wrap">
+      <div class="contentBG">   
+        <div class="container">
+          <div class="content">
+            
+<div class="page-header">
+  <h1>Bootstrap Footer 置底 <small></small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <h1 id="問題">問題</h1>
+
+<p>在twitter bootstrap 裡footer預設是黏著body</p>
+
+<p>跟著又高又低的很有事</p>
+
+<p>所以突發奇想來stick my fucking footer 啦！！！</p>
+
+<p><br/><br/><br/></p>
+
+<h1 id="解決">解決</h1>
+
+<p>footer部分</p>
+
+<div class="code_type">HTML</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer&gt;</span>      
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>要輸入的內容<span class="nt">&lt;/p&gt;</span>      
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>加container是為了讓footer裏的內容可以置中</p>
+</blockquote>
+
+<p><br/></p>
+
+<div class="code_type">CSS</div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">html</span> <span class="p">{</span>
+
+  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+  <span class="k">min-height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+
+<span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span>
+
+  <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span>
+
+<span class="p">}</span>
+<span class="nt">footer</span> <span class="p">{</span>
+
+  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+  <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#f5f5f5</span><span class="p">;</span>
+  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<ol>
+<li><p>body 的屬性是optional的</p></li>
+<li><p>footer裡要text-align裡面的字才會置中</p></li>
+</ol>
+</blockquote>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/19/markdown%E7%AD%86%E8%A8%98" title="Markdown筆記">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/20/%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BC%95%E5%85%A5-syntax-highlight" title="部落格引入 Syntax Highlight">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = ''; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>20 December 2014</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#bootstrap-ref">bootstrap <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+          </div>
+        </div> <!-- /container -->
+      </div>
+    </div> 
+    
+
+    <!-- 尾巴 -->
+    <div class="footer">
+      
+        <div class="container blur-me footer_box">
+          <p>Copyright &copy; 2014 Ajay Chung </p>
+        </div>
+
+    </div>
+
+   
+
+    
+  </body>
+</html>
+

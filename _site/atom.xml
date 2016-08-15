@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Coding Hash</title>
+ <link href="http://tobychung.github.io/" rel="self"/>
+ <link href="http://tobychung.github.io"/>
+ <updated>2016-08-15T15:32:28+08:00</updated>
+ <id>http://tobychung.github.io</id>
+ <author>
+   <name>Ajay Chung</name>
+   <email>toby4120@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Javascript的好用function</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/03/05/javascript%E7%9A%84%E5%A5%BD%E7%94%A8function"/>
+   <updated>2015-03-05T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/03/05/javascript的好用function</id>
+   <content type="html">&lt;h2 id=&quot;map&quot;&gt;&lt;font color=&quot;green&quot;&gt;map&lt;/font&gt;&lt;/h2&gt;
+
+&lt;p&gt;對目標array做整理用的&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;avg_arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;avg_arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;avg_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;平均&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;avg_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;宣告陣列後,將變數一個一個塞進去&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;陣列中的max值&quot;&gt;&lt;font color=&quot;green&quot;&gt;陣列中的max值&lt;/font&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max_one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;直接找最大的值&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;宣告陣列&quot;&gt;&lt;font color=&quot;green&quot;&gt;宣告陣列&lt;/font&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;找最大值所在的index，而最大值week4的index是 3&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>獲取陣列最大值的index</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/03/04/%E7%8D%B2%E5%8F%96%E9%99%A3%E5%88%97%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84index"/>
+   <updated>2015-03-04T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/03/04/獲取陣列最大值的index</id>
+   <content type="html">&lt;h2 id=&quot;宣告陣列&quot;&gt;&lt;font color=&quot;green&quot;&gt;宣告陣列&lt;/font&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;week1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;week2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;week3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;week4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;week5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;week1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;week2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;week3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;week4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;week5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;宣告陣列後,將變數一個一個塞進去&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;陣列中的max值&quot;&gt;&lt;font color=&quot;green&quot;&gt;陣列中的max值&lt;/font&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max_one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;直接找最大的值&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;宣告陣列&quot;&gt;&lt;font color=&quot;green&quot;&gt;宣告陣列&lt;/font&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;找最大值所在的index，而最大值week4的index是 3&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>D3js的 This 探討</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/02/26/d3js%E7%9A%84-this-%E6%8E%A2%E8%A8%8E"/>
+   <updated>2015-02-26T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/02/26/d3js的-this-探討</id>
+   <content type="html">&lt;h1 id=&quot;this就是指-quot-自己所在的物件本身-quot&quot;&gt;this就是指&amp;quot;自己所在的物件本身&amp;quot;&lt;/h1&gt;
+
+&lt;p&gt;在一個宣告的function中&lt;/p&gt;
+
+&lt;p&gt;this 是指自己所在的 &amp;quot;物件(object)&amp;quot; 本身&lt;/p&gt;
+
+&lt;p&gt;所以如果沒有在一個物件裡&lt;/p&gt;
+
+&lt;p&gt;一般都會指向大地之母 &amp;quot;window&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;因為我們整個網頁本身就是一個最大的物件！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&quot;red&quot;&gt;大地之母 &amp;quot;window&amp;quot; ＝ 整個網頁的全部&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// global object&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;隨便宣告一個function,通常他的this就是整個window！！！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;我們來看一個例子...&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;狀況1&quot;&gt;&lt;font color=&quot;green&quot;&gt;狀況1&lt;/font&gt;&lt;/h2&gt;
+
+&lt;p&gt;我在&amp;quot;d3js&amp;quot;裡要在thing上做&lt;/p&gt;
+
+&lt;p&gt;當滑鼠移進去circle時要找他的上一層 ( 有點像jQuery的parent() )&lt;/p&gt;
+
+&lt;p&gt;並把他console出來&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt; &lt;span class=&quot;nx&quot;&gt;circle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseenter&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+
+            &lt;span class=&quot;nx&quot;&gt;inCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+
+        &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+
+            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
+             &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this的上一層&lt;/span&gt;
+
+             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   
+             &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this本身&lt;/span&gt;
+
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;滑鼠移進circle時呼叫inCircle()，並分別console出g和b&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;可惜console的結果會變以下這樣&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/themes/twitter/img/g_undefine.jpg&quot; alt=&quot;gundefined&quot;&gt;
+&lt;img src=&quot;/assets/themes/twitter/img/b_undefine.jpg&quot; alt=&quot;gundefined&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;很明顯的，這個時候this指向整個網頁文件window&lt;/p&gt;
+
+&lt;p&gt;而這也導致其上一層為 undefined&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;原理解釋&quot;&gt;原理解釋&lt;/h2&gt;
+
+&lt;p&gt;因為網頁是從頭到尾load一次&lt;/p&gt;
+
+&lt;p&gt;當觸發on事件時呼叫inCircle函式&lt;/p&gt;
+
+&lt;p&gt;此時inCircle()並沒有在任何一個已宣告物件內&lt;/p&gt;
+
+&lt;p&gt;所以自然他的this就是整個網頁大物件window囉！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;狀況2&quot;&gt;&lt;font color=&quot;green&quot;&gt;狀況2&lt;/font&gt;&lt;/h2&gt;
+
+&lt;p&gt;其實d3js在on事件有幫我們把this寫好&lt;/p&gt;
+
+&lt;p&gt;只要記得把傳進去就好&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;JS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt; &lt;span class=&quot;nx&quot;&gt;circle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseenter&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;inCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//將$this丟進inCirle&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+
+        &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;  
+
+            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
+             &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this的上一層&lt;/span&gt;
+
+             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   
+             &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this本身&lt;/span&gt;
+
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;當$this丟進inCircle()時inCircle()就不再六神無主&lt;/p&gt;
+
+&lt;p&gt;此時this就是指circle本身&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/themes/twitter/img/gb_define.jpg&quot; alt=&quot;gundefined&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;可是&quot;&gt;&lt;font color=&quot;green&quot;&gt;可是&lt;/font&gt;&lt;/h2&gt;
+
+&lt;p&gt;可是為什麼&lt;mark&gt;jQuery在綁定on事件&lt;/mark&gt;時都是用&lt;mark&gt;狀況一&lt;/mark&gt;的方法呢？&lt;/p&gt;
+
+&lt;p&gt;因為jQuery本身就幫你把this綁好在要觸發的物件上&lt;/p&gt;
+
+&lt;p&gt;算是揪甘心拉！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;其實&quot;&gt;&lt;font color=&quot;green&quot;&gt;其實&lt;/font&gt;&lt;/h2&gt;
+
+&lt;p&gt;其實最最最簡潔的寫法&lt;/p&gt;
+
+&lt;p&gt;可以參照d3js的API裡面&lt;a href=&quot;https://github.com/mbostock/d3/wiki/Selections#on&quot;&gt;.on&lt;/a&gt;規範的方法&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt; &lt;span class=&quot;nx&quot;&gt;circle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseenter&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+
+        &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;  
+
+            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
+             &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this的上一層&lt;/span&gt;
+
+             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   
+             &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this本身&lt;/span&gt;
+
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只是我們要在這裡討論this在不同情況下的差異&lt;/p&gt;
+
+&lt;p&gt;所以才要先用笨方法xD&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>進場特效css</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/21/%E9%80%B2%E5%A0%B4%E7%89%B9%E6%95%88css"/>
+   <updated>2014-12-21T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/21/進場特效css</id>
+   <content type="html">&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
+有時候想直接套用animated.css的特效&lt;/p&gt;
+
+&lt;p&gt;像是fadeIn bounceIn  bla bla bla...&lt;/p&gt;
+
+&lt;p&gt;（姑且稱呼他為進場特效）&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;可是總是要事先把div藏起來似乎有點麻煩&lt;/p&gt;
+
+&lt;p&gt;就來做一個小trick節省時間吧！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;前置&quot;&gt;前置&lt;/h1&gt;
+
+&lt;p&gt;要先在html裡先引入animate.css&lt;/p&gt;
+
+&lt;p&gt;要怎麼用請看&lt;a href=&quot;http://daneden.github.io/animate.css/&quot;&gt;animate.css官網&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;HTML&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/css/kit/animate.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;作法&quot;&gt;作法&lt;/h1&gt;
+
+&lt;p&gt;假設我要控制title這個div進場&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;HTML&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;我是大標題&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;  
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;控制div花多少時間進場，本例以毫秒為單位&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;CSS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    &lt;span class=&quot;nc&quot;&gt;.visible&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                 &lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;只要加 &lt;mark&gt;&amp;quot;特效名稱&amp;quot;&lt;/mark&gt; 跟 &lt;mark&gt;&amp;quot;animated&amp;quot;&lt;/mark&gt; 這兩個class&lt;/p&gt;
+
+&lt;p&gt;animated.css就會作用！&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;jQuery&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    &lt;span class=&quot;o&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.title&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;.addClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;visible fadeIn animated&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;加visible讓他透明度變1，亦即出現的意思！ &lt;/p&gt;
+
+&lt;p&gt;當然如果高手會&amp;quot;dom尋訪&amp;quot;就不用從body找啦！&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>部落格引入 Syntax Highlight</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/20/%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BC%95%E5%85%A5-syntax-highlight"/>
+   <updated>2014-12-20T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/20/部落格引入-syntax-highlight</id>
+   <content type="html">&lt;h1 id=&quot;問題&quot;&gt;問題&lt;/h1&gt;
+
+&lt;p&gt;剛剛要貼程式碼上來的時候發現code沒有highligt&lt;/p&gt;
+
+&lt;p&gt;感覺low掉，來匯入一下syntax highligt吧！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;解決&quot;&gt;解決&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;到根目錄下找到 &lt;mark&gt;_config.yml&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;加入下面兩條(隨便加一個地方都行！)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;markdown: redcarpet
+highlighter: pygments
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;下載&lt;a href=&quot;https://www.dropbox.com/s/kp95plowl7fsfs4/syntax.css?dl=0&quot;&gt;syntax.css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;放到  &lt;mark&gt;專案 ▸ assets ▸ theme ▸ 你的theme ▸ css&lt;/mark&gt;  底下&lt;/li&gt;
+&lt;li&gt;到 &lt;mark&gt;專案 ▸ _includes ▸ themes ▸ 你的theme ▸ default.html&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;加入下面這條引入它（在yml裡是ASSET_PATH : false喔！）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/assets/themes//css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;試用&quot;&gt;試用&lt;/h1&gt;
+
+&lt;p&gt;應該效果出來囉～～撒花～～&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;HTML&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;～～～
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;hello, world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+～～～
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;可是&quot;&gt;可是&lt;/h1&gt;
+
+&lt;p&gt;貼程式碼的時候一定會發現怎麼哪裡怪怪der(?!)，code顏色啦！&lt;/p&gt;
+
+&lt;p&gt;我改的是sublime text的預設顏色&lt;/p&gt;
+
+&lt;p&gt;用滴管上網吸半天＝＝&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;到syntax.css裡改css&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;CSS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#E6D255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.m&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#BA94F2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.nt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#E93979&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.na&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#99C607&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我只改這幾條，之後有遇到新的想改再改！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;可是-again&quot;&gt;可是 again&lt;/h1&gt;
+
+&lt;p&gt;突然發現table壞掉了&lt;/p&gt;
+
+&lt;p&gt;感覺就像抓漏，這邊補好那邊又漏水。。。&lt;/p&gt;
+
+&lt;p&gt;修好它吧！！！&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;到_config.yml裡加上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;redcarpet:
+  extensions: [&amp;quot;no_intra_emphasis&amp;quot;, &amp;quot;fenced_code_blocks&amp;quot;, &amp;quot;autolink&amp;quot;, &amp;quot;tables&amp;quot;, &amp;quot;with_toc_data&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有點像ignore掉它的感覺&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;耶～大功告成！！！&quot;&gt;耶～大功告成！！！&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;阿不就好棒棒！&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Bootstrap Footer 置底</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/20/bootstrap-footer-%E7%BD%AE%E5%BA%95"/>
+   <updated>2014-12-20T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/20/bootstrap-footer-置底</id>
+   <content type="html">&lt;h1 id=&quot;問題&quot;&gt;問題&lt;/h1&gt;
+
+&lt;p&gt;在twitter bootstrap 裡footer預設是黏著body&lt;/p&gt;
+
+&lt;p&gt;跟著又高又低的很有事&lt;/p&gt;
+
+&lt;p&gt;所以突發奇想來stick my fucking footer 啦！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;解決&quot;&gt;解決&lt;/h1&gt;
+
+&lt;p&gt;footer部分&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;HTML&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&amp;gt;&lt;/span&gt;      
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;要輸入的內容&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;      
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;加container是為了讓footer裏的內容可以置中&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code_type&quot;&gt;CSS&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;min-height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f5f5f5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;body 的屬性是optional的&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;footer裡要text-align裡面的字才會置中&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Markdown筆記</title>
+   <link href="http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/19/markdown%E7%AD%86%E8%A8%98"/>
+   <updated>2014-12-19T00:00:00+08:00</updated>
+   <id>http://tobychung.github.io/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/19/markdown筆記</id>
+   <content type="html">&lt;h1 id=&quot;功能&quot;&gt;功能&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;是以電子郵件常用的簡單簡潔語法為發想&lt;/p&gt;
+
+&lt;p&gt;可以取代HTML較冗長繁複的語法&lt;/p&gt;
+
+&lt;p&gt;如果要用markdown檔案將副檔名存成&amp;quot;.md&amp;quot;即可！&lt;/p&gt;
+
+&lt;p&gt;最神奇的是還可以&lt;mark&gt;混搭html&lt;/mark&gt;，真的太棒了xD!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;套件&quot;&gt;套件&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://macdown.uranusjr.com/&quot;&gt;Macdown&lt;/a&gt;
+蠻推薦的markdown編輯程式，可以左邊編輯右邊及時輸出！&lt;/p&gt;
+
+&lt;p&gt;可是要注意，它輸出的畫面並不絕對是部落格會表現的樣子！&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;部落格的markdown會因為定義的版型而變得不一樣&lt;/p&gt;
+
+&lt;p&gt;我只知道mac的軟體，windows和Linux的我不敢亂推薦，SORRY!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;標題&quot;&gt;標題&lt;/h2&gt;
+
+&lt;p&gt;幾個＃代表h幾  （&lt;mark&gt;＃越多字越小&lt;/mark&gt;，最多到6個）&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  # 歡迎光臨    →     &amp;lt;h1&amp;gt;歡迎光臨&amp;lt;/h1&amp;gt;
+
+### 你好嗎      →     &amp;lt;h3&amp;gt;你好嗎&amp;lt;/h3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;最基本字體變化&quot;&gt;最基本字體變化&lt;/h2&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;功能&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;markdown&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;HTML的樣子&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;粗體&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;＊或是 _&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;字體&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;斜體&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;** 或是 __&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;字體&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;又粗又斜體&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;*** 或是 ___&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;字體&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h5 id=&quot;用法&quot;&gt;用法&lt;/h5&gt;
+
+&lt;p&gt;用上面markdown裏的符號把你要打的字&lt;mark&gt;包起來&lt;/mark&gt;即可顯示效果&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  ＊歡迎光臨＊    →     &amp;quot;歡迎光臨&amp;quot; 會變斜體 
+
+   ### 你好嗎    →     &amp;lt;h3&amp;gt;你好嗎&amp;lt;/h3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;表格&quot;&gt;表格&lt;/h2&gt;
+
+&lt;p&gt;表格的欄可以用&amp;quot;&lt;mark&gt;槓&lt;/mark&gt;&amp;quot;隔開，列則用&amp;quot;&lt;mark&gt;減號&lt;/mark&gt;&amp;quot;隔開&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown範例&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;| 靠左邊         |置中              | 靠右邊         |
+|:------------- |:---------------:| -------------:|  ← 冒號決定置左 
+| col 3 is      | some wordy text |         $1600 |    or置中or置右
+| col 2 is      | centered        |           $12 |
+| zebra stripes | are neat        |            $1 |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;↓↓  &lt;strong&gt;效果&lt;/strong&gt;  ↓↓&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align: left&quot;&gt;靠左邊&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;置中&lt;/th&gt;
+&lt;th style=&quot;text-align: right&quot;&gt;靠右邊&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;col 3 is&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;some wordy text&lt;/td&gt;
+&lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;col 2 is&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
+&lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;zebra stripes&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
+&lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;    &lt;/p&gt;
+
+&lt;h2 id=&quot;其他功能&quot;&gt;其他功能&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;插入圖片   ：   ![圖名](超連結網址)    
+
+超連結     ：    [連結名稱](網址)
+
+顯示code框 ：   用 ～～～ 或 ｀｀｀ 包起來 
+
+附註       ：     前面加 &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;html標籤&quot;&gt;HTML標籤&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;螢光筆      →       &amp;lt;mark&amp;gt;  &amp;lt;/mark&amp;gt;
+
+換行        →           &amp;lt;br/&amp;gt;   
+
+底線        →       &amp;lt;u&amp;gt;     &amp;lt;/u&amp;gt;
+
+消除線      →       &amp;lt;del&amp;gt;   &amp;lt;/del&amp;gt;
+
+換顏色      →       &amp;lt;font color=&amp;quot;色碼&amp;quot;&amp;gt;  &amp;lt;/font&amp;gt;
+
+次方        →        a&amp;lt;sup&amp;gt;b&amp;lt;/sup&amp;gt;     (a的b次方)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ 
+</feed>

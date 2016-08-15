@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3js的 This 探討</title>
+    
+    <meta name="author" content="Ajay Chung">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/animate.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/syntax.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/toby.css" rel="stylesheet">
+
+    <!-- Le javascript -->
+    <script src="/assets/themes/twitter/js/jquery.min.js"></script>
+    <script src="/assets/themes/twitter/js/toby.js"></script>
+    
+
+    <!-- Le fav and touch icons -->
+    <link href="/assets/themes/twitter/img/yy.ico" rel="shortcut icon" >
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <!-- 導航列 -->
+    <!-- <div class="topbar">
+      <div class="fill">
+        <div class="container">
+         
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">檔案櫃</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">目錄</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">標籤</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="header-wrap">
+        <!-- 站名 -->
+        <div class="header_title ">
+          <a class="brand " href="/">Coding Hash</a>
+        </div>
+
+        <!-- 導航列 -->
+        <div class="header_nav nav">
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">檔案櫃</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">目錄</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">標籤</a></li>
+      	
+      
+    
+  
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- 內容 -->
+    <!-- <div class="contentBG"></div> -->
+    <div class="content-wrap">
+      <div class="contentBG">   
+        <div class="container">
+          <div class="content">
+            
+<div class="page-header">
+  <h1>D3js的 This 探討 <small></small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <h1 id="this就是指-quot-自己所在的物件本身-quot">this就是指&quot;自己所在的物件本身&quot;</h1>
+
+<p>在一個宣告的function中</p>
+
+<p>this 是指自己所在的 &quot;物件(object)&quot; 本身</p>
+
+<p>所以如果沒有在一個物件裡</p>
+
+<p>一般都會指向大地之母 &quot;window&quot;</p>
+
+<p>因為我們整個網頁本身就是一個最大的物件！！！</p>
+
+<p><br/></p>
+
+<p><font color="red">大地之母 &quot;window&quot; ＝ 整個網頁的全部</font></p>
+
+<p><br/></p>
+
+<div class="code_type">JS</div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">f1</span><span class="p">(){</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">f1</span><span class="p">()</span> <span class="o">===</span> <span class="nb">window</span><span class="p">;</span> <span class="c1">// global object</span>
+</code></pre></div>
+<blockquote>
+<p>隨便宣告一個function,通常他的this就是整個window！！！</p>
+</blockquote>
+
+<p><br/><br/></p>
+
+<p>我們來看一個例子...</p>
+
+<p><br/><br/></p>
+
+<h2 id="狀況1"><font color="green">狀況1</font></h2>
+
+<p>我在&quot;d3js&quot;裡要在thing上做</p>
+
+<p>當滑鼠移進去circle時要找他的上一層 ( 有點像jQuery的parent() )</p>
+
+<p>並把他console出來</p>
+
+<div class="code_type">JS</div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"> <span class="nx">circle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+
+            <span class="nx">inCircle</span><span class="p">();</span>
+
+        <span class="p">});</span>
+
+
+        <span class="kd">function</span> <span class="nx">inCircle</span><span class="p">(){</span>
+
+            <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">node</span><span class="p">().</span><span class="nx">parentNode</span><span class="p">;</span>   
+             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="nx">g</span><span class="p">);</span> <span class="c1">//this的上一層</span>
+
+             <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>   
+             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="nx">b</span><span class="p">);</span> <span class="c1">//this本身</span>
+
+
+        <span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>滑鼠移進circle時呼叫inCircle()，並分別console出g和b</p>
+</blockquote>
+
+<p><br/></p>
+
+<p>可惜console的結果會變以下這樣</p>
+
+<p><img src="/assets/themes/twitter/img/g_undefine.jpg" alt="gundefined">
+<img src="/assets/themes/twitter/img/b_undefine.jpg" alt="gundefined"></p>
+
+<blockquote>
+<p>很明顯的，這個時候this指向整個網頁文件window</p>
+
+<p>而這也導致其上一層為 undefined</p>
+</blockquote>
+
+<p><br/></p>
+
+<h2 id="原理解釋">原理解釋</h2>
+
+<p>因為網頁是從頭到尾load一次</p>
+
+<p>當觸發on事件時呼叫inCircle函式</p>
+
+<p>此時inCircle()並沒有在任何一個已宣告物件內</p>
+
+<p>所以自然他的this就是整個網頁大物件window囉！</p>
+
+<p><br/><br/></p>
+
+<h2 id="狀況2"><font color="green">狀況2</font></h2>
+
+<p>其實d3js在on事件有幫我們把this寫好</p>
+
+<p>只要記得把傳進去就好</p>
+
+<div class="code_type">JS</div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"> <span class="nx">circle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span>
+
+            <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+            <span class="nx">inCircle</span><span class="p">(</span><span class="nx">$this</span><span class="p">);</span>    <span class="c1">//將$this丟進inCirle</span>
+
+        <span class="p">});</span>
+
+
+        <span class="kd">function</span> <span class="nx">inCircle</span><span class="p">(</span><span class="nx">$this</span><span class="p">){</span>  
+
+            <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">$this</span><span class="p">).</span><span class="nx">node</span><span class="p">().</span><span class="nx">parentNode</span><span class="p">;</span>   
+             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="nx">g</span><span class="p">);</span> <span class="c1">//this的上一層</span>
+
+             <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">$this</span><span class="p">);</span>   
+             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="nx">b</span><span class="p">);</span> <span class="c1">//this本身</span>
+
+
+        <span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>當$this丟進inCircle()時inCircle()就不再六神無主</p>
+
+<p>此時this就是指circle本身</p>
+</blockquote>
+
+<p><img src="/assets/themes/twitter/img/gb_define.jpg" alt="gundefined"></p>
+
+<p><br/><br/></p>
+
+<h2 id="可是"><font color="green">可是</font></h2>
+
+<p>可是為什麼<mark>jQuery在綁定on事件</mark>時都是用<mark>狀況一</mark>的方法呢？</p>
+
+<p>因為jQuery本身就幫你把this綁好在要觸發的物件上</p>
+
+<p>算是揪甘心拉！！！</p>
+
+<p><br/><br/></p>
+
+<h2 id="其實"><font color="green">其實</font></h2>
+
+<p>其實最最最簡潔的寫法</p>
+
+<p>可以參照d3js的API裡面<a href="https://github.com/mbostock/d3/wiki/Selections#on">.on</a>規範的方法</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"> <span class="nx">circle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span><span class="nx">inCircle</span><span class="p">);</span>
+
+
+        <span class="kd">function</span> <span class="nx">inCircle</span><span class="p">(){</span>  
+
+            <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">$this</span><span class="p">).</span><span class="nx">node</span><span class="p">().</span><span class="nx">parentNode</span><span class="p">;</span>   
+             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="nx">g</span><span class="p">);</span> <span class="c1">//this的上一層</span>
+
+             <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">$this</span><span class="p">);</span>   
+             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="nx">b</span><span class="p">);</span> <span class="c1">//this本身</span>
+
+
+        <span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>只是我們要在這裡討論this在不同情況下的差異</p>
+
+<p>所以才要先用笨方法xD</p>
+</blockquote>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2014/12/21/%E9%80%B2%E5%A0%B4%E7%89%B9%E6%95%88css" title="進場特效css">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/03/04/%E7%8D%B2%E5%8F%96%E9%99%A3%E5%88%97%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84index" title="獲取陣列最大值的index">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = ''; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>26 February 2015</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#d3js-ref">d3js <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+          </div>
+        </div> <!-- /container -->
+      </div>
+    </div> 
+    
+
+    <!-- 尾巴 -->
+    <div class="footer">
+      
+        <div class="container blur-me footer_box">
+          <p>Copyright &copy; 2014 Ajay Chung </p>
+        </div>
+
+    </div>
+
+   
+
+    
+  </body>
+</html>
+

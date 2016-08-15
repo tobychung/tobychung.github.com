@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript的好用function</title>
+    
+    <meta name="author" content="Ajay Chung">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/animate.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/syntax.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/toby.css" rel="stylesheet">
+
+    <!-- Le javascript -->
+    <script src="/assets/themes/twitter/js/jquery.min.js"></script>
+    <script src="/assets/themes/twitter/js/toby.js"></script>
+    
+
+    <!-- Le fav and touch icons -->
+    <link href="/assets/themes/twitter/img/yy.ico" rel="shortcut icon" >
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <!-- 導航列 -->
+    <!-- <div class="topbar">
+      <div class="fill">
+        <div class="container">
+         
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">檔案櫃</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">目錄</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">標籤</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="header-wrap">
+        <!-- 站名 -->
+        <div class="header_title ">
+          <a class="brand " href="/">Coding Hash</a>
+        </div>
+
+        <!-- 導航列 -->
+        <div class="header_nav nav">
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">檔案櫃</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">目錄</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">標籤</a></li>
+      	
+      
+    
+  
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- 內容 -->
+    <!-- <div class="contentBG"></div> -->
+    <div class="content-wrap">
+      <div class="contentBG">   
+        <div class="container">
+          <div class="content">
+            
+<div class="page-header">
+  <h1>Javascript的好用function <small></small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <h2 id="map"><font color="green">map</font></h2>
+
+<p>對目標array做整理用的</p>
+
+<div class="code_type">JS</div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">avg_arr</span> <span class="o">=</span> <span class="nx">d_arr</span><span class="p">;</span>
+
+<span class="nx">avg_arr</span> <span class="o">=</span> <span class="nx">avg_arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
+
+                <span class="k">return</span> <span class="nx">num</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
+
+            <span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;平均&#39;</span><span class="p">,</span><span class="nx">avg_arr</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>宣告陣列後,將變數一個一個塞進去</p>
+</blockquote>
+
+<h2 id="陣列中的max值"><font color="green">陣列中的max值</font></h2>
+
+<div class="code_type">JS</div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">max_one</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nb">Math</span><span class="p">,</span><span class="nx">array</span><span class="p">);</span>   <span class="c1">// 8</span>
+</code></pre></div>
+<blockquote>
+<p>直接找最大的值</p>
+</blockquote>
+
+<h2 id="宣告陣列"><font color="green">宣告陣列</font></h2>
+
+<div class="code_type">JS</div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nb">Math</span><span class="p">,</span><span class="nx">max_one</span><span class="p">));</span>  <span class="c1">// 3</span>
+</code></pre></div>
+<blockquote>
+<p>找最大值所在的index，而最大值week4的index是 3</p>
+</blockquote>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/%E5%89%8D%E7%AB%AF%E7%AD%86%E8%A8%98/2015/03/04/%E7%8D%B2%E5%8F%96%E9%99%A3%E5%88%97%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84index" title="獲取陣列最大值的index">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = ''; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>05 March 2015</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#javascript-ref">javascript <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+          </div>
+        </div> <!-- /container -->
+      </div>
+    </div> 
+    
+
+    <!-- 尾巴 -->
+    <div class="footer">
+      
+        <div class="container blur-me footer_box">
+          <p>Copyright &copy; 2014 Ajay Chung </p>
+        </div>
+
+    </div>
+
+   
+
+    
+  </body>
+</html>
+
