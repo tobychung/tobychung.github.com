@@ -5,8 +5,8 @@
         <description>Coding Hash - Ajay Chung</description>
         <link>http://tobychung.github.io</link>
         <link>http://tobychung.github.io</link>
-        <lastBuildDate>2016-08-17T11:22:13+08:00</lastBuildDate>
-        <pubDate>2016-08-17T11:22:13+08:00</pubDate>
+        <lastBuildDate>2016-08-17T11:36:21+08:00</lastBuildDate>
+        <pubDate>2016-08-17T11:36:21+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -372,7 +372,7 @@ highlighter: pygments
 &lt;li&gt;到 &lt;mark&gt;專案 ▸ _includes ▸ themes ▸ 你的theme ▸ default.html&lt;/mark&gt;&lt;/li&gt;
 &lt;li&gt;加入下面這條引入它（在yml裡是ASSET_PATH : false喔！）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/assets/themes//css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/assets/themes/twitter/css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 
