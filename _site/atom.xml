@@ -4,7 +4,7 @@
  <title>Coding Hash</title>
  <link href="http://tobychung.github.io/" rel="self"/>
  <link href="http://tobychung.github.io"/>
- <updated>2016-08-15T15:39:36+08:00</updated>
+ <updated>2016-08-17T10:37:45+08:00</updated>
  <id>http://tobychung.github.io</id>
  <author>
    <name>Ajay Chung</name>
@@ -377,7 +377,7 @@ highlighter: pygments
 &lt;li&gt;到 &lt;mark&gt;專案 ▸ _includes ▸ themes ▸ 你的theme ▸ default.html&lt;/mark&gt;&lt;/li&gt;
 &lt;li&gt;加入下面這條引入它（在yml裡是ASSET_PATH : false喔！）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/assets/themes/twitter/css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/assets/themes//css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 
